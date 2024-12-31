@@ -1,11 +1,8 @@
-
-import './App.css';
+import Body from "./componenets/Body";
 
 function App() {
   return (
-    <div className="App">
-      <p className='text-3xl text-green-700'>jkdfkdjfkdjf</p>
-    </div>
+    <Body/>
   );
 }
 
