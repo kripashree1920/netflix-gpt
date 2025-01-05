@@ -15,3 +15,13 @@ export const API_OPTIONS = {
     accept: "application/json",
   },
 };
+
+export const IMG_CDNURL = 
+"https://image.tmdb.org/t/p/w500/"
+
+export const SUPPORTED_LANGUAGE =[
+  {indentifer:"en", name: "English"},
+  {indentifer:"hindi", name: "Hindi"},
+  {indentifer:"spanish", name: "Spanish"},
+  {indentifer:"kan", name: "Kannada"},
+]
