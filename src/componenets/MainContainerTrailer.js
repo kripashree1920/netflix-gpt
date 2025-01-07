@@ -12,7 +12,7 @@ const MainContainerTrailer = () => {
   const { original_title, overview } = mainMovie;
 
   return (
-    <div>
+    <div >
       <VideoDescription title={original_title} overview={overview} />
       <VideoBackground moviesId={mainMovie?.id} />
     </div>

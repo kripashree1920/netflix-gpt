@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser, removeUser } from "../utils/userSlice";
 import { LOGO, SUPPORTED_LANGUAGE, USER_AVATAR } from "../utils/constant";
-import { toggleGptSearchView } from "../utils/gptSlice";
+import { addResultOfSearchedMovie, toggleGptSearchView } from "../utils/gptSlice";
 import { lang } from "../utils/languageConstants";
 import { changeLanguage } from "../utils/configSlice";
 
@@ -22,12 +22,16 @@ const Header = () => {
       .catch((error) => {
         navigate("/error");
       });
-    dispatch(changeLanguage('en'))
+    dispatch(changeLanguage('en'));
+    dispatch(addResultOfSearchedMovie({movieTitle: null ,SearchResultMovieList: null}))
+
 
   };
   const handleGptSearchToggle = () => {
     dispatch(toggleGptSearchView());
-    dispatch(changeLanguage('en'))
+    dispatch(changeLanguage('en'));
+    dispatch(addResultOfSearchedMovie({movieTitle: null ,SearchResultMovieList: null}))
+
   };
 
   const handleChangeLanguage = (e) => {
@@ -72,8 +76,8 @@ const Header = () => {
             className="bg-pink-600 text-white m-2 px-4 rounded-lg py-2 "
             onClick={handleGptSearchToggle}
           >
-            <i className="fa-brands fa-searchengin mx-1"></i>{" "}
-            {showGptSearch? lang[languageName]?.gptSearch : 'GPT Search'}
+           {showGptSearch? <i className="fa-solid fa-house mx-1"></i>: <i className="fa-brands fa-searchengin mx-1"></i>}
+            {showGptSearch? lang[languageName]?.gptSearch : 'Search Movies'}
           </button>
           <img
             className="w-10 h-10 rounded-md"

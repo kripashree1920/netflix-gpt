@@ -16,7 +16,7 @@ const Browser = () => {
   useTopRatedMovies();
   useUpcomingMovies();
   return (
-    <div className=" flex justify-between flex-wrap">
+    <div className="w-screen flex  justify-between flex-wrap overflow-hidden ">
       <Header />
       {
         showGptSearch ? <GptSearch/> :

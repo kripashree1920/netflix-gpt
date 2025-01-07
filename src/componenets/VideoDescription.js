@@ -14,4 +14,4 @@ const VideoDescription = ({title, overview}) => {
   )
 }
 
-export default VideoDescription
+export default VideoDescription;

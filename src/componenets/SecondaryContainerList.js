@@ -12,10 +12,10 @@ const SecondaryContainerList = () => {
   ]
   return (
     movies && (
-      <div className="bg-black">
-        <div className="relative z-20 -mt-56 pl-12">
+      <div className="bg-black ">
+        <div className="relative z-20 -mt-56 pl-12 overflow-x-hidden">
         {movieCategories.map(({ title, key }) => (
-            <MoviesList key={key} title={title} movies={movies[key]} />
+            <MoviesList key={key} title={title} movies={movies[key]} isSearch={true}/>
           ))}
         </div>
       </div>
