@@ -26,5 +26,5 @@ export const SUPPORTED_LANGUAGE =[
   {indentifer:"kan", name: "Kannada"},
 ]
 
-export const OPEN_AI_KEY =
- "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"
+// export const OPEN_AI_KEY =
+//  "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"
